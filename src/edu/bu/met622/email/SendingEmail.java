@@ -11,7 +11,7 @@ import java.util.Properties;
 public class SendingEmail {
 
     private String host = "";
-    private int port = 0;
+    private int port = 26;
     private String username = "";
     private String password = "";
 
@@ -36,7 +36,7 @@ public class SendingEmail {
                 Message message = new MimeMessage(session);
                 message.setFrom(new InternetAddress("testsender@noemail.com"));
                 // Set To: header field of the header.
-                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("targetemail@nowhere.edu"));
+                message.setRecipients(Message.RecipientType.TO, InternetAddress.parse("testreceiver@nowhere.edu"));
                 message.setSubject("test email Subject");
 
                 String msg = "This is a test email using Java Mailer";

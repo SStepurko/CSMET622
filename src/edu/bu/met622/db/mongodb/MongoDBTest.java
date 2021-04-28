@@ -20,45 +20,48 @@ public class MongoDBTest {
 		
 		// get the 'test' dataset
 	    MongoDatabase dbObj = mongoClient.getDatabase( "test" );
-	    // list its collections
-	    for (String name : dbObj.listCollectionNames()) {
-	    	System.out.println("-------Collections inside this db:"+name);
-	    }
+	    
+//	    // list its collections
+//	    for (String name : dbObj.listCollectionNames()) {
+//	    	System.out.println("-------Collections inside this db:"+name);
+//	    }
 	    // Or explicitely we can go to its collection
-	    MongoCollection<Document> col = dbObj.getCollection("inventory");
-	    // how to read the conent of a document.
-	    Iterator it = col.find().iterator();
-	    while (it.hasNext()) {
-	    	System.out.println("- documents inside the collection:" +it.next());
-	    }
+//	    MongoCollection<Document> col = dbObj.getCollection("inventory");
+//	    // how to read the conent of a document.
+//	    Iterator it = col.find().iterator();
+//	    while (it.hasNext()) {
+//	    	System.out.println("- documents inside the collection:" +it.next());
+//	    }
 	  
 	    // ---------------- insert
 	    // creating a new collection
 //	    dbObj.createCollection("newcolzero");
-	    
-	    // insert new document into a collection	    
+////	    
+//	    MongoCollection<Document> col = dbObj.getCollection("newcolzero");
+//	    // insert new document into a collection	    
 //	    Document mydoc = new Document();
 //	    mydoc.put("name", "johnzzzz");
 //	    mydoc.put("role", "studentzzz");
 //	    col.insertOne( mydoc );
 
-	    MongoCollection<Document> col2 = dbObj.getCollection("newcolzero");
-	    // how to read the conent of a document.
-	    Iterator it2 = col2.find().iterator();
-	    while (it2.hasNext()) {
-	    	System.out.println("- documents inside the collection:" +it.next());
-	    }
+//	    MongoCollection<Document> col2 = dbObj.getCollection("newcolzero");
+//	    // how to read the conent of a document.
+//	    Iterator it2 = col2.find().iterator();
+//	    while (it2.hasNext()) {
+//	    	System.out.println("- documents inside the collection:" +it2.next());
+//	    }
 	   
 	    //--------------------- remove
 	    //remove the collection	    
-	    MongoCollection<Document> collection = dbObj.getCollection("newcolzero");
-	    collection.drop();
-	    
+//	    MongoCollection<Document> collection = dbObj.getCollection("newcolzero");
+//	    collection.drop();
+	    MongoCollection<Document> col = dbObj.getCollection("newcolzero");
+
 	    //remove a document from a collection
 	    BasicDBObject doc2remove = new BasicDBObject();
 	    doc2remove.put("name","johnzzzz");
 	    col.deleteMany(doc2remove);
-	    
+//	    
 	}
 	
 	

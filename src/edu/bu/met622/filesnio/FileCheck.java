@@ -6,6 +6,8 @@ import java.sql.Time;
 
 public class FileCheck {
 	public static void main(String[] args) throws Exception {
+		System.out.println("file separator in my OS:" +System.getProperty("file.separator")); 
+
 		File temp ;
 		try {
 			temp = File.createTempFile("testttt", ".txt");
@@ -14,7 +16,6 @@ public class FileCheck {
 			System.out.println("Path "+temp.getPath());
 			
 			long a = Long.parseLong("8466273930542618974");
-			
 		}
 		catch (IOException ex){
 			ex.printStackTrace();

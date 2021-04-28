@@ -27,9 +27,10 @@ public class TestThreadJoin {
 		t1.start();
 //		t1.sleep(1000);
 		t2.start();
+		t2.join();
 		t3.start();
 //		Lets comment and uncomment t2.join and see the differences.
-//		t2.join();
+		
 		System.out.println("End");
 	}
 }

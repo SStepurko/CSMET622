@@ -12,11 +12,14 @@ public class TesttwoThread {
 		Thread j = new Thread(secondT);
 		
 		i.start();
+		//i.join(); // j is for second thread
+		
+		i.sleep(5000);
+		
 		j.start();
 		
-		//j.join(); // j is for second thread
 		
-		j.sleep(500);
+		
 		
 	}
 }

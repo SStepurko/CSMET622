@@ -14,5 +14,4 @@ public class MyThread extends Thread{
          "%s starts printing a document\n", Thread.currentThread().getName());
       printT.print();
 	}
-	
 }

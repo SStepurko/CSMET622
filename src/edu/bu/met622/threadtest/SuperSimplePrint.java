@@ -11,6 +11,7 @@ public class SuperSimplePrint implements Runnable{
 	public static void main(String[] args) {
 		Thread t = new Thread(new SuperSimplePrint());
 		t.start();
+		
 	}
 
 }

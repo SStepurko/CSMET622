@@ -8,15 +8,15 @@ public class JDBCTest {
  public static void main(String[] args) { 
 	try {
 		JDBCTest jd = new JDBCTest();
-		//jd.insert("tinytail","neighbor","persianCat", 'F');
-		jd.delete("tinytail", "neighbor");
+		jd.insert("tinytail","neighbor","persianCat", 'F');
+		//jd.delete("tinytail", "neighbor");
 		jd.listAllPets();	
 	}catch (Exception ex){
 		ex.printStackTrace();
 	}
  }
  public void listAllPets() throws Exception{ 
-	 
+
 	 try {
 		// I add this "?useTimezone=true&serverTimezone=UTC" because of time zone error
 		con = DriverManager.getConnection("jdbc:mysql://localhost:3306/met622?useTimezone=true&serverTimezone=UTC","root","root");  
